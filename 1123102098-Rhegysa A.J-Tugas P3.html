@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengelolaan Array</title>
+    <script>
+        window.onload = function() {
+            // Mengurutkan angka dan huruf
+            const angka = [20, 10, 3, 30, 58, 42, 6, 9];
+            const huruf = ['z', 'a', 'c', 'g', 'p'];
+
+            const sortedAngka = angka.sort((a, b) => a - b);
+            const sortedHuruf = huruf.sort();
+
+            document.getElementById('output-angka').textContent = sortedAngka;
+            document.getElementById('output-huruf').textContent = sortedHuruf;
+
+            // Menampilkan angka genap
+            const angka2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            const angkaGenap = angka2.filter(num => num % 2 === 0);
+
+            document.getElementById('output-genap').textContent = angkaGenap;
+
+            // Menampilkan true untuk angka genap dan false untuk angka ganjil
+            const angka3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            const genapGanjil = angka3.map(num => num % 2 === 0);
+
+            document.getElementById('output-true-false').textContent = genapGanjil;
+        };
+    </script>
+</head>
+<body>
+    <h1>Pengelolaan Array dengan JavaScript</h1>
+
+    <h2>1. Mengurutkan Angka dan Huruf</h2>
+    <p>Angka: <span id="output-angka"></span></p>
+    <p>Huruf: <span id="output-huruf"></span></p>
+
+    <h2>2. Menampilkan Angka Genap</h2>
+    <p>Angka Genap: <span id="output-genap"></span></p>
+
+    <h2>3. Menampilkan True untuk Angka Genap dan False untuk Angka Ganjil</h2>
+    <p>Hasil: <span id="output-true-false"></span></p>
+</body>
+</html>
